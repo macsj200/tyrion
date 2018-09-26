@@ -124,11 +124,11 @@ export default class Home extends Component {
                               {/* <input className="form-control" value={sigHash} onChange={this.handleOnChange} type="textarea" id="sigHash" /> */}
                           </div>
                           <div className="row">
-                              <div className="orangeButton mx-auto" onClick={this.handleSign}>
+                              <a className="orangeButton mx-auto" onClick={this.handleSign} style={{width: '17rem'}}>
                                   <div style={{margin: 'auto'}}>
                                       Sign
                                   </div>
-                              </div>
+                              </a>
                           </div>
                       </form>
                       {errorMessage && <div className="alert alert-danger" style={{ marginTop: '1rem' }}>
@@ -140,15 +140,15 @@ export default class Home extends Component {
                           {signaturesRaw && <div>
                               <pre className="mb-0">{signaturesRaw}</pre>
                               <div className="row">
-                                  <div
-                                      style={{ marginTop: '1rem', marginRight: '.5rem' }}
+                                  <a
+                                      style={{ marginTop: '1rem', marginRight: '.5rem', width: '17rem' }}
                                       className="orangeButton mx-auto "
                                       onClick={() => this.downloadObjectAsJson(signatures /* not signaturesRaw */, 'signatures')}
                                   >
                                       <div style={{margin: 'auto'}}>
                                           Download File
                                       </div>
-                                  </div>
+                                  </a>
                               </div>
                           </div>}
                       </div>}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import crypto from 'crypto';
+import img from '../images/titanLogo.png';
+
 var bitcoin = require('bitcoinjs-lib');
 
 // TODO generate new key!!!
@@ -92,7 +94,7 @@ export default class Home extends Component {
     return (
       <div className="container-fluid">
           <div className="navbar">
-              <img className="navbar-brand img-fluid" style={{width:'4rem'}} src="/icons/Titan_Logo_BrandMark_DropShadow.png" alt=""/>
+              <img className="navbar-brand img-fluid" style={{width:'4rem'}} src={img} alt=""/>
           </div>
           <div className="card w-auto mx-auto" style={{maxWidth: '45rem', padding: '4rem'}}>
               <div className="row">

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import crypto from 'crypto';
+import img from '../images/titanLogo.png';
+
 var bitcoin = require('bitcoinjs-lib');
 
 // TODO generate new key!!!
@@ -12,7 +14,7 @@ const publicKey = '-----BEGIN PUBLIC KEY-----\n' +
 
 export default class Home extends Component {
   state = {
-    wif:null, //'BuJRgDGLynQmN12yrS1kL4XGg8xzpySgGrWjdthsktgTZ9PfHnKF',
+    wif: '', //'BuJRgDGLynQmN12yrS1kL4XGg8xzpySgGrWjdthsktgTZ9PfHnKF',
     sigHashesRaw: null, // '["f7b43605ca334a74ba8bfdfa4099d0f995844d6fe1f24175907bbe343a1197bf"]',
     sigHashes: [],
     signatures: [],
@@ -92,7 +94,7 @@ export default class Home extends Component {
     return (
       <div className="container-fluid">
           <div className="navbar">
-              <img className="navbar-brand img-fluid" style={{width:'4rem'}} src="/icons/Titan_Logo_BrandMark_DropShadow.png" alt=""/>
+              <img className="navbar-brand img-fluid" style={{width:'4rem'}} src={img} alt=""/>
           </div>
           <div className="card w-auto mx-auto" style={{maxWidth: '45rem', padding: '4rem'}}>
               <div className="row">
@@ -124,11 +126,11 @@ export default class Home extends Component {
                               {/* <input className="form-control" value={sigHash} onChange={this.handleOnChange} type="textarea" id="sigHash" /> */}
                           </div>
                           <div className="row">
-                              <div className="orangeButton mx-auto" onClick={this.handleSign}>
+                              <a className="orangeButton mx-auto" onClick={this.handleSign} style={{width: '17rem'}}>
                                   <div style={{margin: 'auto'}}>
                                       Sign
                                   </div>
-                              </div>
+                              </a>
                           </div>
                       </form>
                       {errorMessage && <div className="alert alert-danger" style={{ marginTop: '1rem' }}>
@@ -140,15 +142,15 @@ export default class Home extends Component {
                           {signaturesRaw && <div>
                               <pre className="mb-0">{signaturesRaw}</pre>
                               <div className="row">
-                                  <div
-                                      style={{ marginTop: '1rem', marginRight: '.5rem' }}
+                                  <a
+                                      style={{ marginTop: '1rem', marginRight: '.5rem', width: '17rem' }}
                                       className="orangeButton mx-auto "
                                       onClick={() => this.downloadObjectAsJson(signatures /* not signaturesRaw */, 'signatures')}
                                   >
                                       <div style={{margin: 'auto'}}>
                                           Download File
                                       </div>
-                                  </div>
+                                  </a>
                               </div>
                           </div>}
                       </div>}

@@ -57,5 +57,13 @@ We mitigate vector 1 by signing all sighash payloads with our sighash private ke
 ## Protocol
 ![Protocol](ost.png)
 
-## TODO
-- Productionize a la [this article](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
+## Releasing a new version
+Follow [this electron guide](https://electronjs.org/docs/tutorial/application-distribution) to create platform-specific binaries. Upload these binaries to github under a new release.
+
+## Key rotation and storagte
+- We have two separate keypairs: the code signing key and the sighashes payload key.
+- We should rotate our keys periodically.
+### Generate a new public/private key pair
+#### Run these commands in terminal
+1. `openssl genrsa -out rsa_1024_priv.pem 1024`
+2. `openssl rsa -in rsa_1024_priv.pem -out rsa_1024_pub.pem -outform PEM -pubout`

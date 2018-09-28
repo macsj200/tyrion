@@ -60,7 +60,7 @@ We mitigate vector 1 by signing all sighash payloads with our sighash private ke
 ## Releasing a new version
 Follow [this electron guide](https://electronjs.org/docs/tutorial/application-distribution) to create platform-specific binaries. Upload these binaries to github under a new release.
 
-## Key rotation and storagte
+## Key rotation and storage
 - We have two separate keypairs: the code signing key and the sighashes payload key.
 - We should rotate our keys periodically.
 ### Generate a new public/private key pair

@@ -22,6 +22,15 @@
              xxxxx                                       
 ## About
 This tool lets the user sign bitcoin transactions (sig hashes) without sending private keys.
+## Methodology
+The offline signing tool is secured using a two-tiered threat model. The first level corresponds to the sighash payload downloaded from lannister, and the second is concerned with the distribution of the offline signing tool itself.
+
+Essentially, there are two attack vectors:
+1. An attacker forges sighashes to trick the seller into signing a bogus transaction
+2. An attacker forges the offline signing tool and modifies the source code. The attacker then exploits attack vector 1.
+
+![Vector 1](vector1.png)
+![Vector 2](vector2.png)
 ## Development link
 [Link to development version](https://titan-digital-exchange.github.io/offline-signing-tool/)
 ## Instructions

@@ -1,0 +1,5 @@
+title Vector 1
+
+Attacker->Seller: Bogus transaction sighashes
+note right of Seller: Seller signs bad sighashes
+Seller->Attacker: Bogus transaction signatures

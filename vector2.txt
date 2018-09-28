@@ -1,0 +1,8 @@
+title Vector 2
+
+note left of Attacker: Swaps out key to forge sighashes
+Attacker->Seller: Comporomised offline signing tool
+Attacker->Seller: Bogus transaction sighashes
+note right of Seller: Seller verifies bad sighashes
+note right of Seller: Seller signs bad sighashes
+Seller->Attacker: Bogus transaction signatures

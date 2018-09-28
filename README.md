@@ -33,7 +33,7 @@ This tool lets the user sign bitcoin transactions (sig hashes) without sending p
 4. Press sign
 5. Press download
 6. Put signatures on flash drive
-6. Input signed hashes to lannister
+6. Input signatures to lannister
 
 ## Methodology
 The offline signing tool is secured using a two-tiered threat model. The first level corresponds to the sighash payload downloaded from lannister, and the second is concerned with the distribution of the offline signing tool itself.

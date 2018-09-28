@@ -24,7 +24,7 @@
 This tool lets the user sign bitcoin transactions (sig hashes) without sending private keys.
 ## Instructions
 1. Download the tool via the [releases page](https://github.com/macsj200/tyrion/releases). Be sure to select the binary for your platform.
-2. If using a cold signing machine, put the tool on a flash drive and mount. We reccomend using an [Ubuntu Live CD/USB](https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install#0) on an airgapped machine.
+2. If using a cold signing machine, put the tool on a flash drive. We recommend using an [Ubuntu Live CD/USB](https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install#0) on an airgapped machine.
 3. Download the sig hashes file (obtained from [lannister-beta](https://lannister-beta.herokuapp.com/)) and put it on a flash drive.
 4. Put your [WIF](https://en.bitcoin.it/wiki/Wallet_import_format) on the flash drive.
 5. Launch the tool

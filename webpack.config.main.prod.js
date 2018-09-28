@@ -25,15 +25,15 @@ export default merge.smart(baseConfig, {
     filename: './app/main.prod.js'
   },
 
-  optimization: {
-    minimizer: [
-      new UglifyJSPlugin({
-        parallel: true,
-        sourceMap: true,
-        cache: true
-      })
-    ]
-  },
+  // optimization: {
+  //   minimizer: [
+  //     new UglifyJSPlugin({
+  //       parallel: true,
+  //       sourceMap: true,
+  //       cache: true
+  //     })
+  //   ]
+  // },
 
   plugins: [
     new BundleAnalyzerPlugin({

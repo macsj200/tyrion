@@ -53,7 +53,6 @@ We mitigate vector 1 by signing all sighash payloads with our sighash private ke
 ### Development
 1. `yarn install`
 2. `yarn start`
-3. (optional) `yarn run electron`
 ## Protocol
 ![Protocol](ost.png)
 

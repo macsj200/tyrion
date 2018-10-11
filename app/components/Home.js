@@ -126,7 +126,7 @@ export default class Home extends Component {
               <div style={{ paddingTop: '1rem' }} className="text-center">
                 <p>
                     You should manually verify that the phrase you see here matches the
-                    phrase displayed in the offline signing tool.
+                    phrase displayed in Titan Escrow.
                 </p>
             </div>
             <div style={{ backgroundColor: 'grey' }} className="text-center">

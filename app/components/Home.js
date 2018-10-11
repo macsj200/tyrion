@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import crypto from 'crypto';
 import img from '../images/titanLogo.png';
+import faker from 'faker';
 
 var bitcoin = require('bitcoinjs-lib');
 
@@ -85,6 +86,25 @@ export default class Home extends Component {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
   }
+  generatePhrase() {
+    const { sigHashesRaw } = this.state;
+    if (sigHashesRaw) {
+        const signatureLength = 172;
+        const signature = decodeURIComponent(sigHashesRaw.slice(0, signatureLength));
+        let seed = 0;
+        for(let i = 0; i < signature.length; i++) {
+          const charCode = signature.charCodeAt(i);
+          seed += charCode;
+        }
+        
+        faker.seed(seed);
+    
+        const phrase = faker.random.words(3);
+        return phrase;
+    } else {
+        return "";
+    }
+  }
   render() {
     const { wif, sigHashesRaw, signatures, errorMessage } = this.state;
     let signaturesRaw;
@@ -103,6 +123,15 @@ export default class Home extends Component {
                       <h4><a href="https://github.com/titan-digital-exchange/offline-signing-tool/blob/master/README.md">Instructions</a></h4>
                   </div>
               </div>
+              <div style={{ paddingTop: '1rem' }} className="text-center">
+                <p>
+                    You should manually verify that the phrase you see here matches the
+                    phrase displayed in the offline signing tool.
+                </p>
+            </div>
+            <div style={{ backgroundColor: 'grey' }} className="text-center">
+                <h5 style={{ color: 'white', padding: '.5rem' }}>{this.generatePhrase()}</h5>
+            </div>
               <div className="row">
                   <div className="col">
                       <form>

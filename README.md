@@ -52,7 +52,7 @@ We mitigate vector 1 by signing all sighash payloads with our sighash private ke
 ## Getting started
 ### Development
 1. `yarn install`
-2. `yarn start`
+2. `yarn start` for production build, `yarn dev` for dev (hot reload)
 ## Protocol
 ![Protocol](ost.png)
 

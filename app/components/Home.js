@@ -123,15 +123,17 @@ export default class Home extends Component {
                       <h4><a href="https://github.com/titan-digital-exchange/offline-signing-tool/blob/master/README.md">Instructions</a></h4>
                   </div>
               </div>
-              <div style={{ paddingTop: '1rem' }} className="text-center">
-                <p>
-                    You should manually verify that the phrase you see here matches the
-                    phrase displayed in Titan Escrow.
-                </p>
-            </div>
-            <div style={{ backgroundColor: 'grey' }} className="text-center">
-                <h5 style={{ color: 'white', padding: '.5rem' }}>{this.generatePhrase()}</h5>
-            </div>
+            {sigHashesRaw && <div>
+                <div style={{ paddingTop: '1rem' }} className="text-center">
+                    <p>
+                        You should manually verify that the phrase you see here matches the
+                        phrase displayed in Titan Escrow.
+                    </p>
+                </div>
+                <div style={{ backgroundColor: 'grey' }} className="text-center">
+                    <h5 style={{ color: 'white', padding: '.5rem' }}>{this.generatePhrase()}</h5>
+                </div>
+            </div>}
               <div className="row">
                   <div className="col">
                       <form>
